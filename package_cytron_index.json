@@ -1,77 +1,187 @@
 {
   "packages": [
     {
-      "name": "cytron",
-      "maintainer": "Cytron",
-      "websiteURL": "http://www.cytron.io",
-      "email": "support@cytron.io",
+      "maintainer": "Cytron Technologies Sdn Bhd", 
       "help": {
-        "online": "http://forum.cytron.io/"
-      },
+        "online": "http://forum.cytron.io"
+      }, 
+      "websiteURL": "https://www.cytron.io", 
       "platforms": [
         {
-          "name": "Cytron AVR Boards",
-          "architecture": "avr",
-          "version": "1.5.4",
-          "category": "Cytron",
-          "url": "https://cytrontechnologies.github.io/downloads/cytron-avr.tar.bz2",
-          "archiveFileName": "cytron-avr.tar.bz2",
-          "checksum": "SHA-256:CAAE7636D53238F03F48DC439351C8F9E5DD5386BD79F477F2A8767F63076FC1",
-          "size": "1761873",
+          "category": "Cytron", 
+          "name": "Cytron AVR Boards", 
+          "url": "https://cytrontechnologies.github.io/downloads/cytron-avr.tar.bz2", 
+          "checksum": "SHA-256:CAAE7636D53238F03F48DC439351C8F9E5DD5386BD79F477F2A8767F63076FC1", 
           "help": {
             "online": "http://forum.cytron.io/"
-          },
+          }, 
+          "version": "1.5.4", 
+          "architecture": "avr", 
+          "archiveFileName": "cytron-avr.tar.bz2", 
           "boards": [
             {
               "name": "Cuteduino"
-            },
+            }, 
             {
               "name": "CT UNO"
             }
-          ],
+          ], 
           "toolsDependencies": [
             {
-              "packager": "arduino",
-              "name": "avr-gcc",
-              "version": "4.8.1-arduino5"
-            },
+              "packager": "arduino", 
+              "version": "4.8.1-arduino5", 
+              "name": "avr-gcc"
+            }, 
             {
-              "packager":"arduino",
-              "name":"avrdude",
-              "version":"6.0.1-arduino5"
-            },
+              "packager": "arduino", 
+              "version": "6.0.1-arduino5", 
+              "name": "avrdude"
+            }, 
             {
-              "packager": "cytron",
-              "name": "avr-dummy",
-              "version": "avr-dummy"
+              "packager": "cytron", 
+              "version": "avr-dummy", 
+              "name": "avr-dummy"
             }
-          ]
+          ], 
+          "size": "1761873"
+        }, 
+        {
+          "category": "Cytron Technologies", 
+          "name": "Cytron ARM Boards", 
+          "url": "https://github.com/CytronTechnologies/CT-ARM/releases/download/1.1.0/cytron-arm-1.1.0.zip", 
+          "checksum": "SHA-256:f55e5a2e595e1605d9306a52534d7995ac751f3b808c9ed8a31761bd1012cc00", 
+          "help": {
+            "online": "https://cytrontechnologies.github.io/CT-ARM/"
+          }, 
+          "version": "1.1.0", 
+          "architecture": "arm", 
+          "archiveFileName": "cytron-arm-1.1.0.zip", 
+          "boards": [
+            {
+              "name": "CT ARM"
+            }
+          ], 
+          "toolsDependencies": [
+            {
+              "packager": "cytron", 
+              "version": "4.8.3-2014q1", 
+              "name": "arm-none-eabi-gcc"
+            }, 
+            {
+              "packager": "cytron", 
+              "version": "", 
+              "name": "nulinkburn"
+            }
+          ], 
+          "size": "2526092"
         }
-      ],
+      ], 
       "tools": [
         {
-          "name": "avr-dummy",
-          "version": "avr-dummy",
+          "version": "avr-dummy", 
+          "name": "avr-dummy", 
           "systems": [
             {
-              "host": "i686-mingw32",
-              "archiveFileName": "avr-dummy-windows.tar.bz2",
-              "url": "https://cytrontechnologies.github.io/downloads/avr-dummy-windows.tar.bz2",
-              "checksum": "SHA-256:A11DA301CBA13C9F510F8C6E282C3D9C00B560644982370492BFF357EF71C51C",
-
+              "url": "https://cytrontechnologies.github.io/downloads/avr-dummy-windows.tar.bz2", 
+              "checksum": "SHA-256:A11DA301CBA13C9F510F8C6E282C3D9C00B560644982370492BFF357EF71C51C", 
+              "host": "i686-mingw32", 
+              "archiveFileName": "avr-dummy-windows.tar.bz2", 
               "size": "365764"
-            },
+            }, 
             {
-              "host": "x86_64-apple-darwin",
-              "archiveFileName": "avr-dummy-darwin.tar.bz2",
-              "url": "https://cytrontechnologies.github.io/downloads/avr-dummy-darwin.tar.bz2",
-              "checksum": "SHA-256:7E2AD9B4ABE8B3A3F8F9DD1743004B743260ED2DC3398D4002BF28F350406C5D",
-
+              "url": "https://cytrontechnologies.github.io/downloads/avr-dummy-darwin.tar.bz2", 
+              "checksum": "SHA-256:7E2AD9B4ABE8B3A3F8F9DD1743004B743260ED2DC3398D4002BF28F350406C5D", 
+              "host": "x86_64-apple-darwin", 
+              "archiveFileName": "avr-dummy-darwin.tar.bz2", 
               "size": "44248"
             }
           ]
+        }, 
+        {
+          "version": "4.8.3-2014q1", 
+          "name": "arm-none-eabi-gcc", 
+          "systems": [
+            {
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-windows.tar.gz", 
+              "checksum": "SHA-256:fd8c111c861144f932728e00abd3f7d1107e186eb9cd6083a54c7236ea78b7c2", 
+              "host": "i686-mingw32", 
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-windows.tar.gz", 
+              "size": "84537449"
+            }, 
+            {
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-mac.tar.gz", 
+              "checksum": "SHA-256:3598ACF21600F17A8E4A4E8E193DC422B894DC09384759B270B2ECE5FACB59C2", 
+              "host": "x86_64-apple-darwin", 
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-mac.tar.gz", 
+              "size": "52518522"
+            }, 
+            {
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-linux64.tar.gz", 
+              "checksum": "SHA-256:d23f6626148396d6ec42a5b4d928955a703e0757829195fa71a939e5b86eecf6", 
+              "host": "x86_64-pc-linux-gnu", 
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-linux64.tar.gz", 
+              "size": "51395093"
+            }, 
+            {
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-linux32.tar.gz", 
+              "checksum": "SHA-256:ba1994235f69c526c564f65343f22ddbc9822b2ea8c5ee07dd79d89f6ace2498", 
+              "host": "i686-pc-linux-gnu", 
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-linux32.tar.gz", 
+              "size": "51029223"
+            }, 
+            {
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-arm.tar.bz2", 
+              "checksum": "SHA-256:ebe96b34c4f434667cab0187b881ed585e7c7eb990fe6b69be3c81ec7e11e845", 
+              "host": "arm-linux-gnueabihf", 
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-arm.tar.bz2", 
+              "size": "44423906"
+            }
+          ]
+        }, 
+        {
+          "version": "", 
+          "name": "nulinkburn", 
+          "systems": [
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download//nuvodude--win32.zip", 
+              "checksum": "SHA-256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 
+              "host": "i686-mingw32", 
+              "archiveFileName": "nuvodude--win32.zip", 
+              "size": "0"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download//nuvodude--osx.tar.gz", 
+              "checksum": "SHA-256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 
+              "host": "x86_64-apple-darwin", 
+              "archiveFileName": "nuvodude--osx.tar.gz", 
+              "size": "0"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download//nuvodude--linux64.tar.gz", 
+              "checksum": "SHA-256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 
+              "host": "x86_64-pc-linux-gnu", 
+              "archiveFileName": "nuvodude--linux64.tar.gz", 
+              "size": "0"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download//nuvodude--linux32.tar.gz", 
+              "checksum": "SHA-256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 
+              "host": "i686-pc-linux-gnu", 
+              "archiveFileName": "nuvodude--linux32.tar.gz", 
+              "size": "0"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download//nuvodude--linux-armhf.tar.gz", 
+              "checksum": "SHA-256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 
+              "host": "arm-linux-gnueabihf", 
+              "archiveFileName": "nuvodude--linux-armhf.tar.gz", 
+              "size": "0"
+            }
+          ]
         }
-      ]
+      ], 
+      "email": "support@cytron.io", 
+      "name": "cytron"
     }
   ]
 }
