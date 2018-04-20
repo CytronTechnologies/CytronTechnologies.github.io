@@ -5,16 +5,15 @@
       "help": {
         "online": "http://forum.cytron.io"
       }, 
-      "websiteURL": "http://www.cytron.io", 
+      "websiteURL": "https://www.cytron.io", 
       "platforms": [
         {
           "category": "Cytron", 
-          "name": "Cytron AVR Boards", 
-          "url": "https://cytrontechnologies.github.io/downloads/cytron-avr.tar.bz2", 
-          "checksum": "SHA-256:CAAE7636D53238F03F48DC439351C8F9E5DD5386BD79F477F2A8767F63076FC1", 
           "help": {
             "online": "http://forum.cytron.io/"
           }, 
+          "url": "https://cytrontechnologies.github.io/downloads/cytron-avr.tar.bz2", 
+          "checksum": "SHA-256:CAAE7636D53238F03F48DC439351C8F9E5DD5386BD79F477F2A8767F63076FC1", 
           "version": "1.5.4", 
           "architecture": "avr", 
           "archiveFileName": "cytron-avr.tar.bz2", 
@@ -26,6 +25,7 @@
               "name": "CT UNO"
             }
           ], 
+          "size": "1761873", 
           "toolsDependencies": [
             {
               "packager": "arduino", 
@@ -43,7 +43,37 @@
               "name": "avr-dummy"
             }
           ], 
-          "size": "1761873"
+          "name": "Cytron AVR Boards"
+        }, 
+        {
+          "category": "Cytron Technologies", 
+          "name": "Cytron ARM Boards", 
+          "url": "https://github.com/CytronTechnologies/CT-ARM/releases/download/1.1.0/cytron-arm-1.1.0.zip", 
+          "checksum": "SHA-256:07e3de650390ba305444db78cdf298c004ecd7653acfe48c2743fec58d268760", 
+          "help": {
+            "online": "https://cytrontechnologies.github.io/CT-ARM/"
+          }, 
+          "version": "1.1.0", 
+          "architecture": "arm", 
+          "archiveFileName": "cytron-arm-1.1.0.zip", 
+          "boards": [
+            {
+              "name": "CT ARM"
+            }
+          ], 
+          "toolsDependencies": [
+            {
+              "packager": "cytron", 
+              "version": "4.8.3-2014q1", 
+              "name": "arm-none-eabi-gcc"
+            }, 
+            {
+              "packager": "cytron", 
+              "version": "1.0.1", 
+              "name": "nulinkburn"
+            }
+          ], 
+          "size": "2526092"
         }, 
         {
           "category": "Cytron Technologies", 
@@ -52,14 +82,10 @@
           }, 
           "url": "https://cytrontechnologies.github.io/downloads/cytron-arm.tar.bz2", 
           "checksum": "SHA-256:B21DFE2EDBCD87E0C9CCCA5D0326F273834D3FDD724C25E1FDB01F300166CE02", 
+          "name": "Cytron ARM Boards", 
           "version": "1.0.0", 
           "architecture": "arm", 
           "archiveFileName": "cytron-arm.tar.bz2", 
-          "boards": [
-            {
-              "name": "CT ARM"
-            }
-          ], 
           "size": "2715643", 
           "toolsDependencies": [
             {
@@ -73,7 +99,11 @@
               "name": "nulinkburn"
             }
           ], 
-          "name": "Cytron ARM Boards"
+          "boards": [
+            {
+              "name": "CT ARM"
+            }
+          ]
         }, 
         {
           "category": "Cytron Technologies", 
@@ -82,14 +112,10 @@
           }, 
           "url": "https://github.com/CytronTechnologies/CT-ARM/releases/download/1.0.1/cytron-arm-1.0.1.zip", 
           "checksum": "SHA-256:dde5edab2ba7154ecfd7d4b4f4bcddac46001fb4e60df447a2d24474daba3171", 
+          "name": "Cytron ARM Boards", 
           "version": "1.0.1", 
           "architecture": "arm", 
           "archiveFileName": "cytron-arm-1.0.1.zip", 
-          "boards": [
-            {
-              "name": "CT ARM"
-            }
-          ], 
           "size": "4215796", 
           "toolsDependencies": [
             {
@@ -103,7 +129,11 @@
               "name": "nulinkburn"
             }
           ], 
-          "name": "Cytron ARM Boards"
+          "boards": [
+            {
+              "name": "CT ARM"
+            }
+          ]
         }
       ], 
       "tools": [
@@ -158,6 +188,13 @@
               "host": "i686-pc-linux-gnu", 
               "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-linux32.tar.gz", 
               "size": "51029223"
+            }, 
+            {
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-arm.tar.bz2", 
+              "checksum": "SHA-256:ebe96b34c4f434667cab0187b881ed585e7c7eb990fe6b69be3c81ec7e11e845", 
+              "host": "arm-linux-gnueabihf", 
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-arm.tar.bz2", 
+              "size": "44423906"
             }
           ]
         }, 
@@ -192,6 +229,47 @@
               "host": "i686-pc-linux-gnu", 
               "archiveFileName": "nulinkburn-linux32.tar.gz", 
               "size": "7604"
+            }
+          ]
+        }, 
+        {
+          "version": "1.0.1", 
+          "name": "nulinkburn", 
+          "systems": [
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download/1.0.1/nuvodude-1.0.1-win32.zip", 
+              "checksum": "SHA-256:e7db08c7c851310b9f2672fa3f702ee838123d7b435eee8ffcb5535ded55f220", 
+              "host": "i686-mingw32", 
+              "archiveFileName": "nuvodude-1.0.1-win32.zip", 
+              "size": "27791"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download/1.0.1/nuvodude-1.0.1-osx.tar.gz", 
+              "checksum": "SHA-256:1e247f035249261762b594066f06e2a4286a2fdfcc4c3b84bd98ce3f699e2f89", 
+              "host": "x86_64-apple-darwin", 
+              "archiveFileName": "nuvodude-1.0.1-osx.tar.gz", 
+              "size": "11929"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download/1.0.1/nuvodude-1.0.1-linux64.tar.gz", 
+              "checksum": "SHA-256:9b658978f70465f4ea79364ec4b84d06a2dba3dcf2bae74d6b100f0b0d52ec68", 
+              "host": "x86_64-pc-linux-gnu", 
+              "archiveFileName": "nuvodude-1.0.1-linux64.tar.gz", 
+              "size": "7377"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download/1.0.1/nuvodude-1.0.1-linux32.tar.gz", 
+              "checksum": "SHA-256:e7163c88810681884ee72698d59867223d41f9ba30a66abb1dc513236e00282a", 
+              "host": "i686-pc-linux-gnu", 
+              "archiveFileName": "nuvodude-1.0.1-linux32.tar.gz", 
+              "size": "7615"
+            }, 
+            {
+              "url": "https://github.com/CytronTechnologies/nuvodude/releases/download/1.0.1/nuvodude-1.0.1-linux-armhf.tar.gz", 
+              "checksum": "SHA-256:00cef8c1509fa39fe36571ab80dce9a2135d8203ec1b27336987de1edd62f214", 
+              "host": "arm-linux-gnueabihf", 
+              "archiveFileName": "nuvodude-1.0.1-linux-armhf.tar.gz", 
+              "size": "6908"
             }
           ]
         }
